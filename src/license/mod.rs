@@ -20,7 +20,7 @@ pub enum Error {
         reason: String,
     },
 
-    #[error("Unknown license '{id}' is not permitted")]
+    #[error("Unknown license `{id}` is not permitted")]
     UnknownLicense { id: String },
 
     #[error("Empty")]

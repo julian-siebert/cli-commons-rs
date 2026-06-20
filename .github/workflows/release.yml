@@ -22,7 +22,7 @@ jobs:
     outputs:
       version: ${{ steps.extract.outputs.version }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Extract and validate version from tag
         id: extract
@@ -55,7 +55,7 @@ jobs:
       name: production
       url: https://crates.io/crates/buffy/${{ needs.validate-release-tag.outputs.version }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
